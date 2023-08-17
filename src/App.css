@@ -1,5 +1,20 @@
+/* src/App.css */
 .App {
   text-align: center;
+  margin-top: 50px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin: 10px;
 }
 
 .App-logo {

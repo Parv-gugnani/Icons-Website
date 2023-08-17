@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import "./App.css";
+import SvgIcon from "./components/SvgIcon";
 
-function App() {
+const App = () => {
+  const icons = [
+    { name: "star", src: "/path-to-star.svg", alt: "Star Icon" },
+    { name: "heart", src: "/path-to-heart.svg", alt: "Heart Icon" },
+    // Add more icons here
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Icons Website</h1>
+      <div className="icon-container">
+        {icons.map((icon, index) => (
+          <SvgIcon key={index} src={icon.src} alt={icon.alt} />
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
